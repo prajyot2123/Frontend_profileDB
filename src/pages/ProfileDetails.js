@@ -14,7 +14,7 @@ const ProfileDetails = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/profiles/${id}`);
+        const res = await axios.get(`https://profile-management-system-9f1m.onrender.com/api/profiles/${id}`);
         setProfile(res.data);
       } catch (error) {
         console.error("Error fetching profile", error);
