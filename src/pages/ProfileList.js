@@ -17,7 +17,7 @@ const ProfileList = () => {
 
   const fetchProfiles = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/profiles");
+      const res = await axios.get("https://profile-management-system-9f1m.onrender.com/api/profiles");
       setProfiles(res.data);
     } catch (error) {
       console.error("Error fetching profiles:", error);
@@ -26,7 +26,7 @@ const ProfileList = () => {
 
   const deleteProfile = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/profiles/${id}`);
+      await axios.delete(`https://profile-management-system-9f1m.onrender.com/api/profiles/${id}`);
       fetchProfiles();
     } catch (error) {
       console.error("Error deleting profile:", error);
