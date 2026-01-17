@@ -22,7 +22,7 @@ const AddProfile = () => {
 
   const fetchProfile = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/profiles/${profileId}`);
+      const res = await axios.get(`https://profile-management-system-9f1m.onrender.com/api/profiles/${profileId}`);
       const { name, photo, description, location } = res.data;
       setName(name);
       setPhoto(photo);
@@ -50,10 +50,10 @@ const AddProfile = () => {
     try {
       if (profileId) {
         // Update profile
-        await axios.put(`http://localhost:5000/api/profiles/${profileId}`, newProfile);
+        await axios.put(`https://profile-management-system-9f1m.onrender.com/api/profiles/${profileId}`, newProfile);
       } else {
         // Add profile
-        await axios.post("http://localhost:5000/api/profiles", newProfile);
+        await axios.post("https://profile-management-system-9f1m.onrender.com/api/profiles", newProfile);
       }
       navigate("/");
     } catch (error) {
@@ -125,3 +125,4 @@ const AddProfile = () => {
 };
 
 export default AddProfile;
+
